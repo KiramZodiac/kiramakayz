@@ -1,7 +1,10 @@
 import React from "react";
-import {BrowserRouter as router,routes,route,Link} from 'react-router-dom'
+import { Components } from "react";
+import {BrowserRouter as router,routes,route,Link} from 'react-router-dom';
 import { useState,useEffect } from "react";
 
+import Home from './componets/Home';
+import About from './components/About';
 
 
 
@@ -17,6 +20,8 @@ const [size,setSize] = useState(500);
 
 return(
 <>
+<Home />
+
 <h1>hello the color is {color}{counter}{datt}</h1>
 <h2>{datt}</h2>
 <div style={{
