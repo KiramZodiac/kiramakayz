@@ -2,9 +2,8 @@ import React from "react";
 import { Components } from "react";
 import {BrowserRouter as router,routes,route,Link} from 'react-router-dom';
 import { useState,useEffect } from "react";
+import Counter from "./Counter";
 
-import Home from './componets/Home';
-import About from './components/About';
 
 
 
@@ -19,30 +18,32 @@ const [size,setSize] = useState(500);
 
 
 return(
-<>
-<Home />
+<div class = "container">
+<Counter />
 
 <h1>hello the color is {color}{counter}{datt}</h1>
 <h2>{datt}</h2>
 <div style={{
-    width: 200,
+    width: 200, 
     height: 200,
     backgroundColor: color,
     borderRadius: 100,
-    size:size,
     
-}}></div>
+    
+}}>
 
+</div>
+<div class = "container">
 <button type ="button" onClick={(()=>setCounter((counter +1) ))}>add</button>
 
-<button type="button" onClick= {() => setColor("yellow")}>yellow </button>
+<button className='btn btn-success' type="button" onClick= {() => setColor("yellow")}>yellow </button>
 <button type="button" onClick= {() => setColor("red")}> red</button>
 <button type="button" onClick= {() => setColor("green")}>green</button>
 <button type="button" onClick = {() => setColor("orange")}>orange</button>
 <button type="button" onClick= {() => setColor("pink")}>pink</button>
-<button type="button" onClick={() =>setSize(400)}>size</button>
+
 
 <button type="button"onClick={() =>Date()}>today is</button>
-
-</>  
+</div>
+</div>  
 )};
